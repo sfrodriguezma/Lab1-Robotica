@@ -1,0 +1,513 @@
+MODULE Module1
+    CONST robtarget Target_Home:=[[-1072.839355322,-234.910774766,-392.092638435],[0.715491621,0.012715406,-0.698087879,0.024153079],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_A:=[[150,160,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_B:=[[150,-100,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[0,0,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[0,18,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[39.831153741,1.194868139,0.000316024],[0.546512267,0,0,-0.837451098],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_40:=[[40.000444548,23.915042969,0.000316024],[0.707106781,0,0,-0.707106781],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[10,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[10,28,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_70:=[[12,30,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_80:=[[31.75,30,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_90:=[[33.75,28,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_100:=[[33.75,19.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_110:=[[35.75,17.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_120:=[[40.5,17.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_130:=[[42.5,19.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_140:=[[42.5,35,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_150:=[[10,35,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_160:=[[10,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_170:=[[17.5,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_180:=[[17.5,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_190:=[[19.5,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_200:=[[24.25,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_210:=[[26.25,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_220:=[[26.25,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_230:=[[33.75,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_240:=[[32.5,34.5,42],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_250:=[[33.75,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_260:=[[35.75,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_270:=[[40.5,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_280:=[[42.5,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_290:=[[42.5,60,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_300:=[[10,60,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_310:=[[10,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_320:=[[26.25,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_330:=[[10,72.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_340:=[[10,80,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_350:=[[26.25,75,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_360:=[[26.25,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_370:=[[33.75,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_380:=[[33.75,70.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_390:=[[35.75,72.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_400:=[[40.5,72.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_410:=[[42.5,70.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_420:=[[42.5,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_430:=[[26.25,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_440:=[[26.25,78,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_450:=[[28.25,80,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_460:=[[42.5,80,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_470:=[[42.5,85,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_480:=[[12,85,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_490:=[[10,87,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_500:=[[10,103,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_510:=[[12,105,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_520:=[[31.75,105,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_530:=[[33.75,103,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_540:=[[33.75,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_550:=[[26.25,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_560:=[[24.25,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_570:=[[19.5,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_580:=[[17.5,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_590:=[[19.5,97.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_600:=[[24.25,97.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_610:=[[26.25,95.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_620:=[[26.25,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_630:=[[33.75,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_640:=[[35.75,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_650:=[[40.5,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_660:=[[42.5,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_670:=[[42.5,116.25,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_680:=[[17.5,116.25,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_690:=[[17.5,110,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_700:=[[10,110,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_710:=[[10,130,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_720:=[[17.5,130,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_730:=[[17.5,123.75,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_740:=[[42.5,123.75,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_750:=[[42.5,135,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_760:=[[12,135,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_770:=[[10,137,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_780:=[[10,153,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_790:=[[12,155,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_800:=[[48,155,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_810:=[[50,153,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_820:=[[40.5,147.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_830:=[[19.5,147.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_840:=[[17.5,145.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_850:=[[17.5,144.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_860:=[[19.5,142.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_870:=[[40.5,142.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_880:=[[42.5,144.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_890:=[[42.5,145.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_900:=[[40.5,147.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_910:=[[50,153,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_920:=[[50,12,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_930:=[[48,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_940:=[[28.25,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_950:=[[26.25,12,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_960:=[[26.25,20.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_970:=[[24.25,22.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_980:=[[19.5,22.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_990:=[[17.5,20.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_1000:=[[17.5,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_1010:=[[10,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_581:=[[17.5,95.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    PERS tooldata Acople_marcador:=[TRUE,[[-38.206006923,-0.666,148.964813197],[0.976296008,0,-0.216439609,0]],[0.26,[1,1,76],[1,0,0,0],0,0,0]];
+    TASK PERS wobjdata Workobject_1:=[FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[-451.717296816,171.680715827,311.454120503],[0.031305244,0.026397921,-0.999137092,0.006942803]]];
+    CONST robtarget Target_aux:=[[-103.354302033,322.09600911,-416.495671543],[0.323820785,-0.614142193,-0.37149219,-0.616411404],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_maintenance:=[[-273.049371815,-836.747169278,-334.293710262],[0.448593047,0.507578073,-0.43113929,0.596026585],[-2,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50_2:=[[70,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60_2:=[[70,28,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_70_2:=[[72,30,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_80_2:=[[91.75,30,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_90_2:=[[93.75,28,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_100_2:=[[93.75,19.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_110_2:=[[95.75,17.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_120_2:=[[100.5,17.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_130_2:=[[102.5,19.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_140_2:=[[102.5,35,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_150_2:=[[70,35,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_160_2:=[[70,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_170_2:=[[77.5,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_180_2:=[[77.5,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_190_2:=[[79.5,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_200_2:=[[84.25,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_210_2:=[[86.25,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_220_2:=[[86.25,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_230_2:=[[93.75,55,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_250_2:=[[93.75,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_260_2:=[[95.75,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_270_2:=[[100.5,42.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_280_2:=[[102.5,44.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_290_2:=[[102.5,60,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_300_2:=[[70,60,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_310_2:=[[70,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_320_2:=[[86.25,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_330_2:=[[70,72.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_340_2:=[[70,80,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_350_2:=[[86.25,75,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_360_2:=[[86.25,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_370_2:=[[93.75,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_380_2:=[[93.75,70.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_390_2:=[[95.75,72.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_400_2:=[[100.5,72.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_410_2:=[[102.5,70.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_420_2:=[[102.5,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_430_2:=[[86.25,67.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_440_2:=[[86.25,78,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_450_2:=[[88.25,80,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_460_2:=[[102.5,80,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_470_2:=[[102.5,85,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_480_2:=[[72,85,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_490_2:=[[70,87,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_500_2:=[[70,103,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_510_2:=[[72,105,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_520_2:=[[91.75,105,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_530_2:=[[93.75,103,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_540_2:=[[93.75,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_550_2:=[[86.25,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_560_2:=[[84.25,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_570_2:=[[79.5,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_580_2:=[[77.5,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_581_2:=[[77.5,95.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_590_2:=[[79.5,97.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_600_2:=[[84.25,97.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_610_2:=[[86.25,95.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_620_2:=[[86.25,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_630_2:=[[93.75,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_640_2:=[[95.75,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_650_2:=[[100.5,92.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_660_2:=[[102.5,94.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_670_2:=[[102.5,116.25,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_680_2:=[[77.5,116.25,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_690_2:=[[77.5,110,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_700_2:=[[70,110,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_710_2:=[[70,130,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_720_2:=[[77.5,130,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_730_2:=[[77.5,123.75,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_740_2:=[[102.5,123.75,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_750_2:=[[102.5,135,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_760_2:=[[72,135,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_770_2:=[[70,137,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_780_2:=[[70,153,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_790_2:=[[72,155,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_800_2:=[[108,155,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_810_2:=[[110,153,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_820_2:=[[100.5,147.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_830_2:=[[79.5,147.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_840_2:=[[77.5,145.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_850_2:=[[77.5,144.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_860_2:=[[79.5,142.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_870_2:=[[100.5,142.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_880_2:=[[102.5,144.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_890_2:=[[102.5,145.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_900_2:=[[100.5,147.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_910_2:=[[110,153,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_920_2:=[[110,12,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_930_2:=[[108,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_940_2:=[[88.25,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_950_2:=[[86.25,12,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_960_2:=[[86.25,20.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_970_2:=[[84.25,22.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_980_2:=[[79.5,22.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_990_2:=[[77.5,20.5,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_1000_2:=[[77.5,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_1010_2:=[[70,10,0],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    TASK PERS wobjdata Workobject_2:=[FALSE,TRUE,"",[[-10,10,0],[1,0,0,0]],[[492.5,557.146,64.337],[0,1,0,0]]];
+    !***********************************************************
+    !
+    ! Module:  Module1
+    !
+    ! Description:
+    !   <Insert description here>
+    !
+    ! Author: Sergio
+    !
+    ! Version: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedure main
+    !
+    !   This is the entry point of your program
+    !
+    !***********************************************************
+    PROC main()
+        WHILE TRUE do
+            IF DI_01=1 THEN
+                Reset DO_03;
+                Set DO_01;
+                set Conveyor_FWD;
+                WaitTime 3.8;
+                Reset Conveyor_FWD;
+                Path_Home;
+                !Path_Line;
+                Path_aux;
+                Path_Sergio Workobject_1;
+                Path_SergioSuperior;
+                Path_aux;
+                Path_Home;
+                 Path_Sergio Workobject_2;
+                Reset DO_01;
+            ENDIF
+            IF DI_02=1 THEN
+                Reset DO_01;
+                Set DO_03;
+                Path_Home;
+                Path_maintenance;
+               ! Reset DO_01;
+            ENDIF
+            
+         ENDWHILE
+    ENDPROC
+    
+
+
+ 
+! VAR intnum int_DI_02;
+   
+! PERS robtarget p;
+!     PROC main()
+!     IDelete int_DI_02;
+!     CONNECT int_DI_02 WITH Interruption;   ! conectar la variable con la TRAP
+!     ISignalDI DI_02, 1, int_DI_02;         ! cuando DI_01 = 1 -> ejecuta Interruption
+!     WHILE TRUE DO
+!            IF DI_01=1 THEN
+!                Set DO_01;
+!                Path_Home;
+!                !Path_Line;
+!                Path_aux;
+!                Path_Sergio;
+!                Path_aux;
+!                Path_Home;
+!                Reset DO_01;
+!            ENDIF
+!         ENDWHILE
+!    ENDPROC
+
+!TRAP Interruption
+!    StopMove;
+!    p := CRobT(\Tool:=Acople_marcador\WObj:=Workobject_1);
+!    StorePath;
+!    Path_aux;
+!    Path_Home;
+!    Path_aux;
+!    MoveJ p,v400,z10,Acople_marcador\WObj:=Workobject_1;
+!    RestoPath;
+!    StartMove;
+!ENDTRAP
+
+
+    
+    
+    PROC Path_Line()
+        MoveL Target_10,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_20,v400,z10,Acople_marcador\WObj:=Workobject_1;
+    ENDPROC
+    PROC Path_Home()
+        MoveJ Target_Home,v400,z10,Acople_marcador\WObj:=Workobject_1;
+    ENDPROC
+   PROC Path_Sergio(PERS wobjdata wobj)
+    MoveL Target_50,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_60,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_70,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_80,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_90,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_100,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_110,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_120,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_130,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_140,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_150,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_160,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_170,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_180,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_190,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_200,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_210,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_220,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_230,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_240,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_250,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_260,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_270,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_280,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_290,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_300,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_310,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_320,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_330,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_340,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_350,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_360,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_370,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_380,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_390,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_400,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_410,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_420,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_430,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_440,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_450,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_460,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_470,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_480,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_490,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_500,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_510,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_520,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_530,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_540,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_550,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_560,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_570,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_580,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_590,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_600,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_610,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_620,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_630,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_640,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_650,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_660,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_670,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_680,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_690,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_700,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_710,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_720,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_730,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_740,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_750,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_760,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_770,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_780,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_790,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_800,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_810,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_820,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_830,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_840,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_850,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_860,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_870,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_880,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_890,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_900,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_910,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_920,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_930,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_940,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_950,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_960,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_970,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_980,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_990,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_1000,v100,z10,Acople_marcador\WObj:=wobj;
+    MoveL Target_1010,v100,z10,Acople_marcador\WObj:=wobj;
+ENDPROC
+
+
+    PROC Path_aux()
+        MoveJ Target_aux,v400,z10,Acople_marcador\WObj:=Workobject_1;
+    ENDPROC
+    PROC Path_maintenance()
+        MoveJ Target_maintenance,v400,z10,Acople_marcador\WObj:=Workobject_1;
+    ENDPROC
+    PROC Path_SergioSuperior()
+        MoveL Target_50_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_60_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_70_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_80_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_90_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_100_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_110_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_120_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_130_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_140_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_150_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_160_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_170_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_180_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_190_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_200_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_210_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_220_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_230_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_250_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_260_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_270_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_280_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_290_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_300_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_310_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_320_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_330_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_340_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_350_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_360_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_370_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_380_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_390_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_400_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_410_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_420_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_430_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_440_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_450_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_460_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_470_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_480_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_490_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_500_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_510_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_520_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_530_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_540_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_550_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_560_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_570_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_580_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_581_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_590_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_600_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_610_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_620_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_630_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_640_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_650_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_660_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_670_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_680_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_690_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_700_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_710_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_720_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_730_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_740_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_750_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_760_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_770_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_780_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_790_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_800_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_810_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_820_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_830_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_840_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_850_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_860_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_870_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_880_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_890_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_900_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_910_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_920_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_930_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_940_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_950_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_960_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_970_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_980_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_990_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_1000_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+        MoveL Target_1010_2,v400,z10,Acople_marcador\WObj:=Workobject_1;
+
+    ENDPROC
+    
+ENDMODULE
