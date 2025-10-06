@@ -1,6 +1,6 @@
-# 🎂 ABB IRB 140 - Decorador de Tortas Virtual (Lab 2 - Robótica Industrial)
+# 🎂 ABB IRB 140 - Emulacion de decorador de Tortas  (Lab 1 - Robótica Industrial)
 
-Este proyecto simula una celda robotizada de decoración de pasteles utilizando un robot **ABB IRB 140**. El sistema, desarrollado en **RobotStudio** y ejecutado en robot real, traza trayectorias que forman nombres y adornos sobre una torta virtual. Para representar un entorno de producción más realista, se implementó una **línea de producción virtual** mediante **Smart Components** como `PlaneSensor`, `LinearMove` y `Source`, simulando el paso secuencial de pasteles por una banda transportadora.
+Este proyecto emula una celda robotizada de decoración de pasteles utilizando un robot **ABB IRB 140**. El sistema, desarrollado en **RobotStudio** y ejecutado tanto en simulacion como en el robot real, traza trayectorias que forman nombres y adornos sobre una caja que emula a una torta. En la simulacion se emulo la banda transportadora utilizando un linear smart component, mientras que en el laboratorio LABSIR de la UNAL bogota se utilizaron bandas y logica cableada real.
 
 ---
 
@@ -10,8 +10,8 @@ Este proyecto simula una celda robotizada de decoración de pasteles utilizando 
 * Controlador IRC5 con módulo DSQC652
 * Herramienta física (marcador montado)
 * Software CAD para generar archivo `.SAT`
-* Robot ABB IRB 140 y banco de trabajo
-* Memoria USB y cable Ethernet RJ-45
+* Robot ABB IRB 140 y banco de trabajo.
+* Memoria USB y/o cable Ethernet RJ-45.
 
 ---
 
@@ -26,14 +26,14 @@ Simular la decoración de una torta para 20 personas escribiendo los **nombres d
 * Velocidades entre `v100` y `v1000`
 * Tolerancia de zona: `z10`
 * Movimiento continuo desde y hacia la posición `Home`
-* Uso de `MoveL`, `MoveC` según la geometría
-* Decoración sobre cuadrantes x(+), y(+), y su espejo x(+), y(–)
-* Integración con línea de producción usando sensores y lógica de flujo de piezas
+* Implementacion de dos entradas digitales conectadas a pulsadores que permitan controlar la rutina de decoracion del pastel y el desplazamiento del robot a una zona de mantenimiento y/o cambio de herramienta
+* Implementacion de 2 salidas digitales, una para activar un piloto cuando se esta en la rutina de decoracion, y otra para activar o desactivar la banda transportadora.
+* Decoración sobre cuadrantes x(+), y(+), y su espejo x(+), y(–) cambiando solo el Work object.
 
 
 ## 🛠️ Herramienta Personalizada
 
-Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
+Se diseñó una herramienta que permite sujetar un plumón al flanche del robot, para lo cual se uso el software Fusion 360(aunque habria podido ser cualquiera de modelamiento 3D)
 
 ![Herramienta y robot](img/herramientaABB.png)
 
@@ -51,6 +51,8 @@ Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 [https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final](https://github.com/user-attachments/assets/9738a95b-ae7c-4b41-90e0-3457959aa022)
 
 ---
+
+## 🗺️ Comparativo de los TCP, simulacion vs calibracion
 
 ## 🗺️ WorkObject y Escenario
 
@@ -82,8 +84,8 @@ A continuación se presenta una vista desde arriba (top view) de la celda robót
 
 Se crearon trayectorias para:
 
-* **Nombres del equipo**: usando líneas rectas (`MoveL`)
-* **Decoración libre**: combinando `MoveL` y `MoveC`
+* **Nombres del equipo**
+* **Decoración libre**(Par lo cual se dibujo una estrella.)
 
 ![Texto en CAD](img/WOfin.png)
 
