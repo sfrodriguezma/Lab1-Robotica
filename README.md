@@ -33,22 +33,29 @@ Simular la decoración de una torta para 20 personas escribiendo los **nombres d
 
 ## 🛠️ Herramienta Personalizada
 
-Se diseñó una herramienta que permite sujetar un plumón al flanche del robot, para lo cual se uso el software Fusion 360(aunque habria podido ser cualquiera de modelamiento 3D)
-
-![Herramienta y robot](img/herramientaABB.png)
-
-*Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
+Se diseñó una herramienta que permite sujetar un plumón al flanche del robot, para lo cual se uso el software Fusion 360.
 
 ![Diseño CAD herramienta](assets/img/foto-herramienta-fusion.png)
 
-*Figura: Modelo CAD de la herramienta diseñada para sujetar un marcador. Se observan los agujeros de fijación y la forma cónica adaptada a la punta del plumón.*
+*Figura: Modelo CAD de la herramienta diseñada para contener el marcador. Se observan el ángulo de inclinación de 30 grados y la terminación con la forma del marcador.*
+
+
+![Herramienta y robot](assets/img/foto-herramienta-robotstudio.png)
+
+*Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
 
 
 
-* 🎥 *\[Video de calibración de herramienta (TCP)]*
-  Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante el cual se determinó la posición del punto central de la herramienta (TCP). El proceso arrojó un error general de 2,6 mm en la calibración
 
-[https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final](https://github.com/user-attachments/assets/9738a95b-ae7c-4b41-90e0-3457959aa022)
+## 🎥 *Calibración de herramienta (TCP)*
+Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante el cual se determinó la posición del punto central de la herramienta (TCP). El proceso arrojó un error general de 2,42 mm en la calibración con un mínimo de 1.51 mm y un máximo de 3.40 mm.
+
+<video width="1080" height="720" controls>
+  <source src="assets/video/calibracion-tcp.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+
+![Resultados Calibración TCP](assets/img/resultados-calibracion-tcp.jpg)
 
 ---
 
@@ -61,21 +68,15 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 * Cuadrante principal: `x(+)`, `y(+)`
 * Cuadrante reflejado: `x(+)`, `y(–)`
 
-![WorkObject](img/trayect.png)
-
-*Figura: Vista superior del WorkObject y letras diseñadas sobre el pastel virtual.*
-
-![Vista superior WorkObject](img/wotra.png)
-
-*Figura: Visualización del sistema de coordenadas local del WorkObject en RobotStudio.*
-
 ---
 
 ## 🗺️ Plano de Planta
 
 A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel y la orientación del sistema.
 
-![Plano de planta de la celda](img/planta.jpg)
+![Plano de planta de la celda](assets/img/vista-superior-caja-trayectoria.jpg)
+
+
 *Figura: Plano de planta de la celda. Se muestra la ubicación relativa del robot, el pastel, y el entorno de trabajo.*
 
 ---
@@ -84,25 +85,23 @@ A continuación se presenta una vista desde arriba (top view) de la celda robót
 
 Se crearon trayectorias para:
 
-* **Nombres del equipo**
-* **Decoración libre**(Par lo cual se dibujo una estrella.)
+* **Nombres del equipo:** Sergio en los dos casos
+* **Decoración libre:** para lo cual se dibujo una estrella.
 
-![Texto en CAD](img/WOfin.png)
+![Nombre en Fusion](assets/img/nombre-fusion.png)
 
-*Figura: Diseño en CAD del texto "MD" con tamaño y tipo de fuente definidos en Fusion 360.*
+*Figura: Diseño en CAD del texto "SERGIO", con todas las letras unidas por la parte superior, de esta forma no se levanta tantas veces el marcador.*
 
-![Trayectoria Curva - RobotStudio](img/trayectcircu.png)
+![Nombre en Fusion](assets/img/estrella-fusion.png)
 
-*Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
+*Figura: Diseño en CAD de la estrella como decoración libre.*
 
-![Letra y trayectorias](img/trayy.png)
 
-*Figura: Vista general de las trayectorias para letras y adornos con robtargets distribuidos.*
+![WorkObject](assets/img/vista-superior-targets.jpg)
 
-https://github.com/user-attachments/assets/5e26dd88-1c4e-4cf2-864c-dd0e56e032f1
+*Figura: Vista general de las trayectorias para letras y adorno con targets asignados.*
 
-* 🎥 *\[Movimiento del robot siguiendo trayectorias -Simulación]*
----
+
 
 ## 💻 Código RAPID
 
@@ -141,11 +140,20 @@ https://github.com/user-attachments/assets/5c8f168d-5ca6-43aa-a8c8-afade868d02a
 
 ## 🧪 Resultados
 
-* 🎥
+El resultado obtenido a partir de todo el procedimiento previo, utilizando el robot real del laboratorio, es el siguiente:
 
- [[Video del robot real ejecutando la rutina](https://youtu.be/k39HLpzMjAk)
+<video width="1080" height="720" controls>
+  <source src="assets/video/resultado-final.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
 
----
+Adicionalmente, se realiza la misma prueba a la máxima velocidad permitida utilizando el botón de hombre muerto, la cual es de 300mm/s.
+
+<video width="1080" height="720" controls>
+  <source src="assets/video/resultado-rapido.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+
 
 ## ⚙️ Lógica del Sistema de Producción (Smart Components)
 ## 🔄 Diagrama de Flujo de Acciones del Robot
