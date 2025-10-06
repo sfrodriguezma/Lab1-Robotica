@@ -172,17 +172,12 @@ Adicionalmente, se realiza la misma prueba a la máxima velocidad permitida util
 
 
  ## 🔄 Diagrama de Flujo de Acciones del Robot
-![Diagrama_flujo](assets/img/Diagrama_flujo.jpeg)
+![Diagrama_flujo](assets/img/Diagrama_flujojpeg.jpeg)
  
 
-*Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
+*Figura: Diagrama de flujo de las acciones del robot*
 
-El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un PlaneSensor), se detiene momentáneamente y luego continúa su avance hasta el siguiente sensor. En ese momento, Se puede apreciar una señal de entrada que, aunque está creada, no se encuentra conectada al SmartComponent. Dicha señal representaría una salida del controlador que daría inicio a la secuencia correspondiente. Sin embargo, en este caso el proceso se ha configurado como completamente automático, activándose mediante la señal negada del sensor.Un paso adiconal importante es  agregar las correpsondientes señales al controlador y conectarlas  en el Station Logic.
-
-1. El sensor activa una señal.
-2. El robot inicia la rutina `Path_MD()` sobre el objeto detectado.
-3. Tras finalizar, se reactiva  `LinearMove`.
-4. El siguiente pastel es generado desde el `Source` y repite el ciclo.
+ 
 
 A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
 
@@ -192,7 +187,7 @@ A continuación se muestra el diagrama del Smart Component utilizado en la simul
 
 *Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
 
-Nota: El sistema cuenta con una entrada digital llamada START, que en un entorno físico podría estar conectada a un pulsador o interfaz de usuario para habilitar el ciclo de trabajo. En esta simulación, dicha señal se mantiene siempre en estado activo (ON), lo que permite que el sistema funcione de manera continua sin intervención manual.
+ 
 
 ## Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
