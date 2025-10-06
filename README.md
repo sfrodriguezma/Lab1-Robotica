@@ -55,6 +55,8 @@ Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante e
   Tu navegador no soporta video HTML5.
 </video>
 
+[Si no puedes ver el video haz click aquí -> Calibración TCP](assets/video/calibracion-tcp.mp4)
+
 ![Resultados Calibración TCP](assets/img/resultados-calibracion-tcp.jpg)
 
 ---
@@ -156,12 +158,17 @@ El resultado obtenido a partir de todo el procedimiento previo, utilizando el ro
   Tu navegador no soporta video HTML5.
 </video>
 
+[Si no puedes ver el video haz click aquí -> Resultado final](assets/video/resultado-final.mp4)
+
+
 Adicionalmente, se realiza la misma prueba a la máxima velocidad permitida utilizando el botón de hombre muerto, la cual es de 300mm/s.
 
 <video width="1080" height="720" controls>
   <source src="assets/video/resultado-rapido.mp4" type="video/mp4">
   Tu navegador no soporta video HTML5.
 </video>
+
+[Si no puedes ver el video haz click aquí -> Resultado a máxima velocidad](assets/video/resultado-rapido.mp4)
 
 
  ## 🔄 Diagrama de Flujo de Acciones del Robot
@@ -189,10 +196,12 @@ Nota: El sistema cuenta con una entrada digital llamada START, que en un entorno
 
 ## Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
-* 🎥 *\[Video de la simulación en RobotStudio]*  
+<video width="1080" height="720" controls>
+  <source src="assets/video/explicacion_simulacion.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
 
-https://github.com/user-attachments/assets/b8160525-beae-4d17-a3f1-f0e78ddf8949
-
+[Si no puedes ver el video haz click aquí -> Resultado a máxima velocidad](assets/video/explicacion_simulacion.mp4)
 
 ## 📌 Conclusiones
 
