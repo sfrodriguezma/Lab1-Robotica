@@ -72,12 +72,12 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 
 ## 🗺️ Plano de Planta
 
-A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel y la orientación del sistema.
+A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel (la caja).
 
-![Plano de planta de la celda](assets/img/vista-superior-caja-trayectoria.jpg)
+![Vista de dibujo sobre pastel](assets/img/vista-de-planta.jpg)
 
 
-*Figura: Plano de planta de la celda. Se muestra la ubicación relativa del robot, el pastel, y el entorno de trabajo.*
+*Figura: Plano de planta de la celda. Se muestra la ubicación del robot, el pastel, y las trayectorias de trabajo.*
 
 ---
 
@@ -101,7 +101,7 @@ Se crearon trayectorias para:
 
 *Figura: Vista general de las trayectorias para letras y adorno con targets asignados.*
 
-
+---
 
 ## 💻 Código RAPID
 
@@ -126,15 +126,6 @@ La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `
 * **`main()`**: bucle principal que espera una señal de sensor (`PlaneSensor1=1`), ejecuta la rutina `Path_MD()` y luego activa una salida para continuar la banda.
 * **`Path_MD()`**: contiene la lógica de movimientos con instrucciones `MoveL` y `MoveC`.
 * Se usan señales de entrada y salida (`WaitUntil`, `SetDO`) para sincronizar con la línea de producción virtual.
-
----
-
-
-
-* 🎥 *\[Simulación rutina en el piso]*
-
-
-https://github.com/user-attachments/assets/5c8f168d-5ca6-43aa-a8c8-afade868d02a
 
 ---
 
