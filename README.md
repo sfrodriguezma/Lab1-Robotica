@@ -188,7 +188,9 @@ El sistema simula una celda con múltiples pasteles avanzando sobre una banda. C
 
 A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
 
-![Diagrama Smart Component](img/SmartComponent.jpg)
+![Station Logic](assets/img/station-logic.jpg)
+
+![Smart Component](assets/img/smart-component.jpg)
 
 *Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
 
