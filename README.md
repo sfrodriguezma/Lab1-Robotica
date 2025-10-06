@@ -165,7 +165,7 @@ Adicionalmente, se realiza la misma prueba a la máxima velocidad permitida util
 
 
  ## 🔄 Diagrama de Flujo de Acciones del Robot
-![Diagrama_flujo](assets/img/Diagrama_flujo.jpeg)
+![Diagrama_flujo](assets/img/Diagrama_flujojpeg.jpeg)
  
 
 *Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
