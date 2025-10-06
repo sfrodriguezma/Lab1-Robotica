@@ -59,7 +59,7 @@ Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante e
 
 ---
 
-## 🗺️ Comparativo de los TCP, simulacion vs calibracion
+ 
 
 ## 🗺️ WorkObject y Escenario
 
@@ -109,23 +109,41 @@ El siguiente fragmento muestra cómo se ejecuta la rutina desde `main()`:
 
 ```rapid
 PROC main()
-    WHILE TRUE DO
-        WaitUntil PlaneSensor1=1;
-        MoveL Target_710,v50,z0,tHerramienta\WObj:=WObj_MD;
-        Path_MD;
-        MoveL Target_710,v50,z0,tHerramienta\WObj:=WObj_MD;
-        SetDO ProceedSignal,1;
-    ENDWHILE
-ENDPROC
+        WHILE TRUE DO
+            !---------Cake decoration Routine-----------
+            IF DI_01=1 THEN
+                Reset DO_03;
+                Set DO_01;
+                set Conveyor_FWD;
+                WaitTime 3.8;
+                Reset Conveyor_FWD;
+                Path_Home;
+                Routine_cake1;
+                Path_Home;
+                Routine_cake2; 
+                Path_Home;
+                Reset DO_01;
+            ENDIF
+            !----------Change tool position Routine/Maintenance ----------------
+            IF DI_02=1 THEN
+                Reset DO_01;
+                Set DO_03;
+                Path_Home;
+                Path_maintenance;
+            ENDIF
+            
+         ENDWHILE
+    ENDPROC
 ```
-
-La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `MoveC` conectadas para formar figuras con continuidad.
-
+Este codigo como se aprecia en los respectivos comentarios tiene 2 rutinas de pastel, en donde la del pastel1 es la que se realiza  sobre la banda transpostadora, y el pastel 2 es el que esta en otro cuadrante y para el cual solo se define otro work object y se reutiliza la respectiva rutina, por otro lado se tiene la rutina de mantenimiento.(todo esto se aprecia mucho mejor en el video explicativo de la simulacion) 
+ 
 ### 🔍 Descripción de funciones RAPID utilizadas
 
-* **`main()`**: bucle principal que espera una señal de sensor (`PlaneSensor1=1`), ejecuta la rutina `Path_MD()` y luego activa una salida para continuar la banda.
-* **`Path_MD()`**: contiene la lógica de movimientos con instrucciones `MoveL` y `MoveC`.
-* Se usan señales de entrada y salida (`WaitUntil`, `SetDO`) para sincronizar con la línea de producción virtual.
+* **`main()`**: bucle principal que espera una señal digital de entrada para su activacion.
+* **` Routine_cake1`** y * **` Routine_cake2`**: Realiza el llamado a las respetivas trayaectorias para decoracion del pastel.
+* * **`Path_maintenance`**: Realiza el llamado a la rutina de mantenimiento.
+* Se usan señales de entrada digitales(` DI_01`, ` DI_02`), las cuales estan conectadas a pulsadores en la realidad y activan la rutina de decoracion de pasteles y de mantenimiento respectivamente.
+* Se usan señales de salida Digitales (DO_01`, `DO_02` y `Conveyor_FWD`), las dos primeras estan conectadas a pilotos para verificacion visual, mientras que la ultima es la que esta conectada a la banda transportadora.
 
 ---
 
