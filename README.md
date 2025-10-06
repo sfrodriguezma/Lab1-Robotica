@@ -1,15 +1,18 @@
 # 🎂 ABB IRB 140 - Emulacion de decorador de Tortas  (Lab 1 - Robótica Industrial)
 
-Este proyecto emula una celda robotizada de decoración de pasteles utilizando un robot **ABB IRB 140**. El sistema, desarrollado en **RobotStudio** y ejecutado tanto en simulacion como en el robot real, traza trayectorias que forman nombres y adornos sobre una caja que emula a una torta. En la simulacion se emulo la banda transportadora utilizando un linear smart component, mientras que en el laboratorio LABSIR de la UNAL bogota se utilizaron bandas y logica cableada real.
+Este proyecto emula una celda robotizada de decoración de pasteles utilizando un robot *ABB IRB 140. El sistema, desarrollado en **RobotStudio* y ejecutado tanto en simulacion como en el robot real, traza trayectorias que forman nombres y adornos sobre una caja que emula a una torta. En la simulacion se emulo la banda transportadora utilizando un linear smart component, mientras que en el laboratorio LABSIR de la UNAL bogota se utilizaron bandas y logica cableada real.
 
 ---
+## Integrantes
+### Sergio Felipe Rodriguez Mayorga - Ingeniería Mecatrónica [GitHub](https://github.com/sfrodriguezma)
+### Sergio Andrés Bolaños Penagos - Ingeniería Mecatrónica - [GitHub](https://github.com/sergiosinlimites)
 
 ## 📦 Requisitos
 
 * RobotStudio (v5 o superior)
 * Controlador IRC5 con módulo DSQC652
 * Herramienta física (marcador montado)
-* Software CAD para generar archivo `.SAT`
+* Software CAD para generar archivo .SAT
 * Robot ABB IRB 140 y banco de trabajo.
 * Memoria USB y/o cable Ethernet RJ-45.
 
@@ -19,36 +22,37 @@ Este proyecto emula una celda robotizada de decoración de pasteles utilizando u
 
 ### Objetivo
 
-Simular la decoración de una torta para 20 personas escribiendo los **nombres de los integrantes del equipo** y una **decoración libre**, respetando restricciones de zona, velocidad y trayectoria.
+Simular la decoración de una torta para 20 personas escribiendo los *nombres de los integrantes del equipo* y una *decoración libre*, respetando restricciones de zona, velocidad y trayectoria.
 
 ### Restricciones técnicas
 
-* Velocidades entre `v100` y `v1000`
-* Tolerancia de zona: `z10`
-* Movimiento continuo desde y hacia la posición `Home`
+* Velocidades entre v100 y v1000
+* Tolerancia de zona: z10
+* Movimiento continuo desde y hacia la posición Home
 * Implementacion de dos entradas digitales conectadas a pulsadores que permitan controlar la rutina de decoracion del pastel y el desplazamiento del robot a una zona de mantenimiento y/o cambio de herramienta
 * Implementacion de 2 salidas digitales, una para activar un piloto cuando se esta en la rutina de decoracion, y otra para activar o desactivar la banda transportadora.
 * Decoración sobre cuadrantes x(+), y(+), y su espejo x(+), y(–) cambiando solo el Work object.
 
 
-## 🛠️ Herramienta Personalizada
+## 🛠 Herramienta Personalizada
 
 Se diseñó una herramienta que permite sujetar un plumón al flanche del robot, para lo cual se uso el software Fusion 360.
 
 ![Diseño CAD herramienta](assets/img/foto-herramienta-fusion.png)
 
-*Figura: Modelo CAD de la herramienta diseñada para contener el marcador. Se observan el ángulo de inclinación de 30 grados y la terminación con la forma del marcador.*
+Figura: Modelo CAD de la herramienta diseñada para contener el marcador. Se observan el ángulo de inclinación de 30 grados y la terminación con la forma del marcador.
 
+Se puede ver la herramienta montada en el flanche de la simulación en la siguiente imagen:
 
 ![Herramienta y robot](assets/img/foto-herramienta-robotstudio.png)
 
-*Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
+Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.
 
 
 
 
-## 🎥 *Calibración de herramienta (TCP)*
-Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante el cual se determinó la posición del punto central de la herramienta (TCP). El proceso arrojó un error general de 2,42 mm en la calibración con un mínimo de 1.51 mm y un máximo de 3.40 mm.
+## 🎥 Calibración de herramienta (TCP)
+Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante el cual se determinó la posición del punto central de la herramienta (TCP). El proceso arrojó un error medio de 2,42 mm en la calibración con un mínimo de 1.51 mm y un máximo de 3.40 mm.
 
 <video width="1080" height="720" controls>
   <source src="assets/video/calibracion-tcp.mp4" type="video/mp4">
@@ -63,53 +67,55 @@ Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante e
 
  
 
-## 🗺️ WorkObject y Escenario
+## 🗺 WorkObject y Escenario
 
-Se definió un `WorkObject` con referencia al plano del pastel, permitiendo replicar las trayectorias en dos cuadrantes:
+Se definió un WorkObject con referencia al plano del pastel, permitiendo replicar las trayectorias en dos cuadrantes:
 
-* Cuadrante principal: `x(+)`, `y(+)`
-* Cuadrante reflejado: `x(+)`, `y(–)`
+* Cuadrante principal: x(+), y(+)
+* Cuadrante reflejado: x(+), y(–)
+
+El pastel tiene unas medidas de 370 mm x 155 mm x 40 mm
 
 ---
 
-## 🗺️ Plano de Planta
+## 🗺 Plano de planta
 
-A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel (la caja).
+A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, la banda transportadora, la ubicación del pastel (la caja) y las trayectorias en el punto al que llega el pastel.
 
 ![Vista de dibujo sobre pastel](assets/img/vista-de-planta.jpg)
 
 
-*Figura: Plano de planta de la celda. Se muestra la ubicación del robot, el pastel, y las trayectorias de trabajo.*
+Figura: Plano de planta de la celda. Se muestra la ubicación del robot, el pastel, y las trayectorias de trabajo.
 
 ---
 
-## ✏️ Diseño de Trayectorias
+## ✏ Diseño de Trayectorias
 
 Se crearon trayectorias para:
 
-* **Nombres del equipo:** Sergio en los dos casos
-* **Decoración libre:** para lo cual se dibujo una estrella.
+* *Nombres del equipo:* Sergio en los dos casos
+* *Decoración libre:* para lo cual se dibujo una estrella.
 
 ![Nombre en Fusion](assets/img/nombre-fusion.png)
 
-*Figura: Diseño en CAD del texto "SERGIO", con todas las letras unidas por la parte superior, de esta forma no se levanta tantas veces el marcador.*
+Figura: Diseño en CAD del texto "SERGIO", con todas las letras unidas por la parte superior, de esta forma no se levanta tantas veces el marcador.
 
 ![Nombre en Fusion](assets/img/estrella-fusion.png)
 
-*Figura: Diseño en CAD de la estrella como decoración libre.*
+Figura: Diseño en CAD de la estrella como decoración libre.
 
 
 ![WorkObject](assets/img/vista-superior-targets.jpg)
 
-*Figura: Vista general de las trayectorias para letras y adorno con targets asignados.*
+Figura: Vista general de las trayectorias para letras y adorno con targets asignados.
 
 ---
 
 ## 💻 Código RAPID
 
-El siguiente fragmento muestra cómo se ejecuta la rutina desde `main()`:
+El siguiente fragmento muestra cómo se ejecuta la rutina desde main():
 
-```rapid
+rapid
 PROC main()
         WHILE TRUE DO
             !---------Cake decoration Routine-----------
@@ -136,16 +142,16 @@ PROC main()
             
          ENDWHILE
     ENDPROC
-```
-Este codigo como se aprecia en los respectivos comentarios tiene 2 rutinas de pastel, en donde la del pastel1 es la que se realiza  sobre la banda transpostadora, y el pastel 2 es el que esta en otro cuadrante y para el cual solo se define otro work object y se reutiliza la respectiva rutina, por otro lado se tiene la rutina de mantenimiento.(todo esto se aprecia mucho mejor en el video explicativo de la simulacion) 
+
+Este codigo como se aprecia en los respectivos comentarios tiene 2 rutinas de pastel, en donde la del pastel 1 es la que se realiza sobre la banda transpostadora, y el pastel 2 es el que esta en otro cuadrante y para el cual solo se define otro work object y se reutiliza la respectiva rutina, por otro lado se tiene la rutina de mantenimiento. (todo esto se aprecia mucho mejor en el video explicativo de la simulación).
  
 ### 🔍 Descripción de funciones RAPID utilizadas
 
-* **`main()`**: bucle principal que espera una señal digital de entrada para su activacion.
-* **` Routine_cake1`** y * **` Routine_cake2`**: Realiza el llamado a las respetivas trayaectorias para decoracion del pastel.
-* * **`Path_maintenance`**: Realiza el llamado a la rutina de mantenimiento.
-* Se usan señales de entrada digitales(` DI_01`, ` DI_02`), las cuales estan conectadas a pulsadores en la realidad y activan la rutina de decoracion de pasteles y de mantenimiento respectivamente.
-* Se usan señales de salida Digitales (DO_01`, `DO_02` y `Conveyor_FWD`), las dos primeras estan conectadas a pilotos para verificacion visual, mientras que la ultima es la que esta conectada a la banda transportadora.
+* **main()**: bucle principal que espera una señal digital de entrada para su activacion.
+* *` Routine_cake1`* y * *` Routine_cake2`*: Realiza el llamado a las respetivas trayectorias para decoración del pastel.
+* * **Path_maintenance**: Realiza el llamado a la rutina de mantenimiento.
+* Se usan señales de entrada digitales(` DI_01`, ` DI_02`), las cuales están conectadas a pulsadores en la realidad y activan la rutina de decoracion de pasteles y de mantenimiento, respectivamente.
+* Se usan señales de salida digitales (DO_01`, DO_02 y Conveyor_FWD), las dos primeras estan conectadas a pilotos para verificacion visual, mientras que la ultima es la que esta conectada a la banda transportadora.
 
 ---
 
@@ -173,23 +179,21 @@ Adicionalmente, se realiza la misma prueba a la máxima velocidad permitida util
 
  ## 🔄 Diagrama de Flujo de Acciones del Robot
 ![Diagrama_flujo](assets/img/Diagrama_flujojpeg.jpeg)
- 
+Figura: Diagrama de flujo de las acciones del robot
 
-*Figura: Diagrama de flujo de las acciones del robot*
 
- 
-
-A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
+A continuación se muestra el diagrama de la estación así como el Smart Component utilizado en la simulación.
+La estación se encarga de conectar la salida DO_01 a la entrada del Smart Component, y el Smart Component utiliza el component LinearMover2, que permite definir una distancia desde el punto inicial (borde de la banda) y un tiempo para llegar a esa distancia. Se definió una distancia de 900 mm a partir del borde de la banda transportadora como punto de llegada para que el robot dibujara.
 
 ![Station Logic](assets/img/station-logic.jpg)
 
+*Figura: Lógica de la estación, en ella se puede ver el Smart Component conectado a la salida DO_01.
+
 ![Smart Component](assets/img/smart-component.jpg)
 
-*Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
+Figura: Diagrama del Smart Component, se utiliza un LinearMover2 que permite asignar una distancia y un tiempo específico al ejecutar.
 
- 
 
-## Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
 <video width="1080" height="720" controls>
   <source src="assets/video/explicacion_simulacion.mp4" type="video/mp4">
@@ -200,10 +204,12 @@ A continuación se muestra el diagrama del Smart Component utilizado en la simul
 
 ## 📌 Conclusiones
 
-* Se aplicaron conceptos de espacio de trabajo, TCP y WObj para trasladar trayectorias entre cuadrantes.
-* El uso de `MoveC` permitió representar geometrías curvas de forma fluida.
-* La integración de sensores y flujo de objetos mediante Smart Components enriqueció la simulación industrial.
-* La experiencia reforzó habilidades en CAD, simulación, programación RAPID y lógica de control de procesos.
+* Se aplicaron conceptos de espacio de trabajo del robot, Tool Central Point (TCP) y WorkObject para trasladar trayectorias entre cuadrantes.
+* Es importante tener en cuenta posibles casos de falla para realizar los modelos de la herramienta, así como para configurar los parámetros de impresión, eligiendo opciones más resistentes que promuevan que la distribución interna del material tienda a ser isotrópica, permitiendole resistir esfuerzos en múltiples direcciones.
+* Se logró una calibración aceptable del TCP, la cual permitió un dibujo prolijo a nivel general, sin embargo debido a inclinaciones de la banda transportadora, en una zona se realizaba el trazo de manera muy leve.
+* El uso del Smart Component LinearMover2, permitió una simulación fluida y sencilla de implementar.
+* El uso de la simulación de RobotStudio permitió anticiparse a errores, y ayudó al rapido y correcto desarrollo de las rutinas que después se realizarían con el robot real.
+* La experiencia reforzó habilidades en modelado, simulación, programación en RAPID y manejo de robot industriales.
 
 ---
 
@@ -213,19 +219,11 @@ El proyecto completo está organizado en las siguientes carpetas y archivos:
 
 | Archivo/Carpeta         | Descripción                                                |
 | ----------------------- | ---------------------------------------------------------- |
-| `Lab2.rsproj` | Proyecto completo de RobotStudio empaquetado (`Pack & Go`) |
-| `Tool_CAD.SAT`          | Modelo CAD de la herramienta para sujetar marcador         |
-| `Pastel_MD.SAT`    | Modelo CAD del WorkObject (pastel)                         |
-| `vid/`               | Carpeta con videos de simulación, ejecución y calibración  |
-| `img/`             | Carpeta con capturas y diagramas utilizados en el informe  |
+| Lab1_trayectories - Linear_smart_component | Proyecto completo de RobotStudio |
+| assets         |  Carpeta con archivos .sat de la herramienta, nombres; dibujos, con sus diferentes versiones debido a inconvenientes con las primeras versiones; y módulos de rapid del Wobj, TCP  |
+| assets/video/               | Carpeta con videos de simulación, ejecución y calibración  |
+| assets/img/             | Carpeta con capturas de pantalla de simulación y resultados de calibración  |
 
-
----
-
-## 🧠 Notas
-
-* Es importante tener bien calibrada la herramienta.
-* Se emplearon herramientas nativas de RobotStudio, programación RAPID y Smart Components.
 
 ---
 
