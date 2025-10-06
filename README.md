@@ -39,7 +39,7 @@ Se diseñó una herramienta que permite sujetar un plumón al flanche del robot,
 
 *Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
 
-![Diseño CAD herramienta](img/CADHerramienta.jpg)
+![Diseño CAD herramienta](assets/img/foto-herramienta-fusion.png)
 
 *Figura: Modelo CAD de la herramienta diseñada para sujetar un marcador. Se observan los agujeros de fijación y la forma cónica adaptada a la punta del plumón.*
 
