@@ -164,18 +164,9 @@ Adicionalmente, se realiza la misma prueba a la máxima velocidad permitida util
 </video>
 
 
-## ⚙️ Lógica del Sistema de Producción (Smart Components)
-## 🔄 Diagrama de Flujo de Acciones del Robot
-
-```mermaid
-flowchart TD
-    Start([Inicio]) --> EsperarSensor["Esperar señal del sensor (PlaneSensor1)"]
-    EsperarSensor --> GoStart["Ir a posición inicial (Target_710)"]
-    GoStart --> Ejecutar["Ejecutar rutina de trazado Path_MD()"]
-    Ejecutar --> Regresar["Volver a posición inicial (Target_710)"]
-    Regresar --> ActivarCinta["Activar señal ProceedSignal"]
-    ActivarCinta --> EsperarSensor
-```
+ ## 🔄 Diagrama de Flujo de Acciones del Robot
+![Diagrama_flujo](assets/img/Diagrama_flujo.jpeg)
+ 
 
 *Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
 
